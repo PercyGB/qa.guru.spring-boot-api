@@ -1,6 +1,6 @@
-# Проект по созданию тестового REST сервиса и его тестированию
+# REST API Service Project
 
-### Используемые технологии и инструменыт:
+### Used Technologies & Tools:
 <p align="left">
 <img height="40" width="40" src="images/java-logo.svg" alt="java">
 <img height="40" width="40" src="images/gradle-logo.svg" alt="gradle">
@@ -12,33 +12,41 @@
 <img height="40" width="40" src="images/allure-Report-logo.svg" alt="allure">
 </p>
 
-### Документирование сервиса:
+### Swagger as a REST API Service Self-Documentation:
+Swagger is available on by link http://localhost:9090/swagger-ui/ after Service is started.
 ![image](images/swagger-view.png)
 
-### Запуск сервиса:
-Сервис работает локально на порту 9090.
-Для запуска сервиса необходимо скачать репозиторий и запустить приложение:
+### How To Run Service:
+The repository should be cloned and Service should be started. Service runs locally on 9090 port.
 ![image](images/launch-service.png)
 
+### List of the Automated Tests:
+- [X] Get all books
+- [X] Get book by existing ISBN
+- [X] Get book by existing ISBN
+- [X] Get book by not existing ISBN
+- [X] Add new book
+- [X] Get all authors
+- [X] Get book by existing author
+- [X] Get book by not existing author
+- [X] Add new author
 
-### Реализованы следующие проверки:
-- [X] Проверка мининимального значения величины вклада
-- [X] Проверка величины дохода по вкладу
-- [X] Проверка величины процента по вкладу
-- [X] Проверка работы ссылки "Все вопросы и ответы"
-- [X] Проверка работы ссылки "Все новости" 
-- [X] Проверка заголовка страницы
-- [X] Проверка консоли браузера на наличие ошибок
+### How To Run Tests </br>
+```bash
+gradle clean test apiTests
+```
 
-### Запуск тестов с использованием Jenkins </br>
-![image](images/jenkins-overview.png)
-#### Параметры, необходимые для запуска:
-![image](images/jenkins-params.png)
+### Allure Report For Test Results Presentation
+#### How to Run Allure Report
+After tests are executed run the following command at Terminal
+```bash
+gradle allureServe
+```
+or run report using GUI
+![image](images/allure-serve.png)
 
-### Allure отчет для отображения результатов тестирования </br>
-#### Общая информация
+#### Allure Report Results
 ![image](images/allure-report-overview.png)
-#### Список тестов c описанием шагов и визуализацией результатов
 ![image](images/allure-report-behavior.png)
 
 

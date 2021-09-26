@@ -1,15 +1,19 @@
 package guru.qa.restbackend.tests;
 
 import guru.qa.restbackend.specs.Specs;
+import io.qameta.allure.Story;
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.Matchers.is;
 
 public class AuthorControllerTests {
     @Test
-
+    @DisplayName("Get all authors")
+    @Tag("Author Controller")
+    @Story("Get Author")
     void getAllAuthors() {
         // @formatter:off
         Specs.authorsRequestSpec
@@ -23,7 +27,10 @@ public class AuthorControllerTests {
     }
 
     @Test
-    @Deprecated
+    @DisplayName("Get book by existing author")
+    @Tag("Author Controller")
+    @Story("Get Author")
+//    @Deprecated
     void getBookByExistingAuthorById() {
         // @formatter:off
         Specs.authorsRequestSpec
@@ -37,6 +44,9 @@ public class AuthorControllerTests {
     }
 
     @Test
+    @DisplayName("Get book by not existing author")
+    @Tag("Author Controller")
+    @Story("Get Author")
     void getBookByNotExistingAuthorId() {
         // @formatter:off
         Specs.authorsRequestSpec
@@ -49,7 +59,10 @@ public class AuthorControllerTests {
     }
 
     @Test
-    @Deprecated
+    @DisplayName("Add new author")
+    @Tag("Author Controller")
+    @Story("Add Author")
+ //   @Deprecated
     void addNewAuthor() {
         // @formatter:off
         Specs.authorsRequestSpec
