@@ -39,6 +39,7 @@ public class BookController {
     }
 
     @PostMapping(value = "books/add", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ApiOperation("Add a new book")
     public Book addBook(@RequestBody Book book) {
         return Book.builder()
                 .title(book.getTitle())

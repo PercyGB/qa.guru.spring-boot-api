@@ -9,6 +9,7 @@ import static org.hamcrest.Matchers.is;
 
 public class AuthorControllerTests {
     @Test
+
     void getAllAuthors() {
         // @formatter:off
         Specs.authorsRequestSpec
