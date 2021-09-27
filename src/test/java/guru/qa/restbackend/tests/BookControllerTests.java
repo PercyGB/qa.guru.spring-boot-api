@@ -1,6 +1,7 @@
 package guru.qa.restbackend.tests;
 
 
+import guru.qa.restbackend.domain.Book;
 import guru.qa.restbackend.specs.Specs;
 import io.qameta.allure.Story;
 import io.restassured.http.ContentType;
@@ -64,15 +65,13 @@ public class BookControllerTests {
     @Tag("Book Controller")
     @Story("Add Book")
     void addNewBook() {
+        Book book = new Book("0932633439", "Peopleware: Productive Projects and Teams", 3);
+
         // @formatter:off
         Specs.booksRequestSpec
                 .given()
                     .contentType(ContentType.JSON)
-                    .body("{" +
-                            "\"isbn\": \"0932633439\",\n" +
-                            "\"author_id\": \"3\",\n" +
-                            "\"title\": \"Peopleware: Productive Projects and Teams\"" +
-                            "}")
+                    .body(book)
                     .log().body()
                 .when()
                     .post("/add")

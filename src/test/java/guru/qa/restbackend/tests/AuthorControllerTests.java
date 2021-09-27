@@ -1,5 +1,6 @@
 package guru.qa.restbackend.tests;
 
+import guru.qa.restbackend.domain.Author;
 import guru.qa.restbackend.specs.Specs;
 import io.qameta.allure.Story;
 import io.restassured.http.ContentType;
@@ -64,15 +65,13 @@ public class AuthorControllerTests {
     @Story("Add Author")
  //   @Deprecated
     void addNewAuthor() {
+        Author author = new Author(4, "Eliyahu", "Goldratt");
+
         // @formatter:off
         Specs.authorsRequestSpec
                 .given()
                     .contentType(ContentType.JSON)
-                    .body("{" +
-                        "\"id\": \"4\",\n" +
-                        "\"first_name\": \"Eliyahu\",\n" +
-                        "\"last_name\": \"Goldratt\"" +
-                        "}")
+                    .body(author)
                     .log().body()
                 .when()
                     .post("/add")
