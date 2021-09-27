@@ -20,7 +20,8 @@ repositories {
 
 def allureVersion = "2.14.0",
     selenideVersion = "5.24.2",
-    junitVersion = "5.7.2"
+    junitVersion = "5.7.2",
+    ownerVersion = "1.0.12"
 
 allure {
     version = allureVersion
@@ -44,6 +45,7 @@ dependencies {
     testImplementation "com.github.javafaker:javafaker:1.0.2"
     testImplementation "io.rest-assured:rest-assured:4.4.0"
     testImplementation "io.qameta.allure:allure-rest-assured:$allureVersion"
+    testImplementation("org.aeonbits.owner:owner:${ownerVersion}")
 }
 
 task apiTests(type: Test) {
