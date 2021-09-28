@@ -3,9 +3,9 @@
 ### Used Technologies & Tools:
 <p align="left">
 <img height="40" width="40" src="images/java-logo.svg" alt="java">
-<img height="40" width="40" src="images/gradle-logo.svg" alt="gradle">
 <img height="40" width="40" src="images/junit5-logo.svg" alt="junit5">
 <img height="40" width="40" src="images/rest-assured-logo.png" alt="rest-assured">
+<img height="40" width="40" src="images/gradle-logo.svg" alt="gradle">
 <img height="40" width="40" src="images/IDEA-logo.svg" alt="IDEA">
 <img height="40" width="40" src="images/git-logo.svg" alt="git">
 <img height="40" width="40" src="images/swagger-logo.png" alt="swagger">
